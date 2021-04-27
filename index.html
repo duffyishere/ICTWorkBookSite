@@ -68,10 +68,10 @@
                                     <tbody>
                                         <tr>
                                             <td valign="top">
-                                                <b>1.</b>
+                                                <b id="problemIndex">1.</b>
                                             </td>
                                             <td valign="top">
-                                                <b>다음 IPv4 주소 중 해당 서브넷의 브로드캐스트 주소를 나타내는 것은 어느 것인가?</b>
+                                                <div id="toSolveProblem">다음 IPv4 주소 중 해당 서브넷의 브로드캐스트 주소를 나타내는 것은 어느 것인가?</b>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -100,12 +100,16 @@
                                             </td>
                                             <td valign="top" align="left">
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="btn1" value=1>
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                        </label>
+                                                    </div>
                                                     <label class="form-check-label" for="inlineRadio1"></label>
                                                 </div>
                                             </td>
                                             </td>
-                                            <td valign="top" align="left" style="font-size: medium">&nbsp;172.16.4.129/26</td>
+                                            <td id="question1" valign="top" align="left" style="font-size: medium">&nbsp;172.16.4.129/26</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -117,11 +121,15 @@
                                         </td>
                                         <td valign="top" align="left">
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="btn2" value=2>
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                    </label>
+                                                </div>
                                                 <label class="form-check-label" for="inlineRadio1"></label>
                                             </div>                                        </td>
                                         </td>
-                                        <td valign="top" align="left" style="font-size: medium">&nbsp;172.16.4.129/26</td>
+                                        <td id="question2" valign="top" align="left" style="font-size: medium">&nbsp;172.16.4.129/26</td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -133,11 +141,15 @@
                                         </td>
                                         <td valign="top" align="left">
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="btn3" value=3>
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                    </label>
+                                                </div>
                                                 <label class="form-check-label" for="inlineRadio1"></label>
                                             </div>                                        </td>
                                         </td>
-                                        <td valign="top" align="left" style="font-size: medium">&nbsp;172.16.4.129/26</td>
+                                        <td id="question3" valign="top" align="left" style="font-size: medium">&nbsp;172.16.4.129/26</td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -149,11 +161,15 @@
                                         </td>
                                         <td valign="top" align="left">
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="btn4" value=4>
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                    </label>
+                                                </div>
                                                 <label class="form-check-label" for="inlineRadio1"></label>
                                             </div>                                        </td>
                                         </td>
-                                        <td valign="top" align="left" style="font-size: medium">&nbsp;172.16.4.129/26</td>
+                                        <td id="question4" valign="top" align="left" style="font-size: medium">&nbsp;172.16.4.129/26</td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -165,15 +181,20 @@
                                         </td>
                                         <td valign="top" align="left">
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="btn5" value=5>
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                    </label>
+                                                </div>
                                                 <label class="form-check-label" for="inlineRadio1"></label>
                                             </div>                                      
                                         </td>
-                                        <td valign="top" align="left" style="font-size: medium">&nbsp;172.16.4.129/26</td>
+                                        <td id="question5" valign="top" align="left" style="font-size: medium">&nbsp;172.16.4.129/26</td>
                                     </tr>
                                     </tbody>
                                 </table>
-
+                                
+                                <button class="btn btn-primary fa-pull-right" onclick="checkAnswer()">다음 문제</button>
                             </tr>
                         </table>
                     </div>
@@ -198,7 +219,7 @@
 <!--<script src="resources/vendor/bootstrap/js/bootstrap.min.js"></script>-->
 
 <!-- Metis Menu Plugin JavaScript -->
-<!--<script src="resources/vendor/metisMenu/metisMenu.min.js"></script>-->
+<script src="resources/vendor/metisMenu/metisMenu.min.js"></script>
 
 <!-- DataTables JavaScript -->
 <!--<script src="resources/vendor/datatables/js/jquery.dataTables.min.js"></script>-->
@@ -207,9 +228,8 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="resources/dist/js/sb-admin-2.js"></script>
-
-<!-- Page-Level Demo Scripts - Tables - Use for reference -->
-
+<!-- Page-Level Demo Scripts - Tables - Use for reference -->   
+<script src="resources/js/index.js"></script>
 <script src="resources/js/main.js"></script>
 </body>
 
